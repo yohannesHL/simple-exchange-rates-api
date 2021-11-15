@@ -61,7 +61,7 @@ Returns:
 }
 ```
 
-1. Convert currency: http://localhost:3000/rates/GBP/convert?to=EUR&amount=90 
+2. Convert currency: http://localhost:3000/rates/GBP/convert?to=EUR&amount=90 
 
 Returns:
 
@@ -82,7 +82,7 @@ Returns:
 }
 ```
 
-1. Add all balances (13.12 EUR + 99 GBP) and convert to CAD: http://localhost:3000/transfers?balance=13.12%20EUR&balance=99%20GBP&toCurrency=CAD
+3. Add all balances (13.12 EUR + 99 GBP) and convert to CAD: http://localhost:3000/transfers?balance=13.12%20EUR&balance=99%20GBP&toCurrency=CAD
 
 Returns:
 
