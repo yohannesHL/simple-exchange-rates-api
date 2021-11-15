@@ -1,21 +1,18 @@
-import { CurrencyAmount } from '../../lib/interfaces';
-
+import { CurrencyAmount } from '../../lib/interfaces'
 
 export interface ExchangeRateResult {
-  baseCurrency: string,
+  baseCurrency: string
   rates: Record<string, number>
 }
 
 export interface ConvertCurrencyInput {
-  amount: number,
-  from: string,
+  amount: number
+  from: string
   to: string
 }
 
 export interface ConvertCurrencyResult {
-  rate: number,
-  from: CurrencyAmount,
+  rate: number
+  from: CurrencyAmount
   to: CurrencyAmount
 }
-
-

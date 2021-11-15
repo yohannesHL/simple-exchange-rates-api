@@ -1,5 +1,5 @@
 export interface IConfig {
-    port: number
+  port: number
 }
 
 export interface CurrencyAmount {
@@ -8,6 +8,6 @@ export interface CurrencyAmount {
 }
 
 export interface ServiceResponse<ResponseDTO> {
-  ok: boolean,
+  ok: boolean
   data: ResponseDTO
 }

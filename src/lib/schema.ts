@@ -1,20 +1,20 @@
-import { Context } from "koa";
+import { Context } from 'koa'
 
 export const validateSchema = async (ctx: Context, schema: any, data: any) => {
-  let errors;
+  let errors
 
-    try {
-      await schema.validate(data, {abortEarly: false})
+  try {
+    await schema.validate(data, { abortEarly: false })
     return true
   } catch (e: any) {
-      errors = e.errors;
-      console.info({e})
+    errors = e.errors
+    console.info({ e })
   }
 
-ctx.body = {
-     ok: false,
-     errors
+  ctx.body = {
+    ok: false,
+    errors,
   }
- 
- return false;
+
+  return false
 }

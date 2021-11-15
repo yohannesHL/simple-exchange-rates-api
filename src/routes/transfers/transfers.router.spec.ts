@@ -9,17 +9,20 @@ describe('Transfers API (e2e)', () => {
       .then(res => {
         expect(res.body.ok).toBe(true)
         expect(res.body.data).toMatchObject({
-          balances: [{
-            currency: 'EUR',
-            value: 13.12,
-          },{
-            currency: 'GBP',
-            value: 99,
-          }],
+          balances: [
+            {
+              currency: 'EUR',
+              value: 13.12,
+            },
+            {
+              currency: 'GBP',
+              value: 99,
+            },
+          ],
           transferedBalance: {
             currency: 'CAD',
-            value: 185.64
-          }
+            value: 185.64,
+          },
         })
       })
   })
@@ -31,14 +34,16 @@ describe('Transfers API (e2e)', () => {
       .then(res => {
         expect(res.body.ok).toBe(true)
         expect(res.body.data).toMatchObject({
-          balances: [{
-            currency: 'EUR',
-            value: 13.12,
-          }],
+          balances: [
+            {
+              currency: 'EUR',
+              value: 13.12,
+            },
+          ],
           transferedBalance: {
             currency: 'CAD',
-            value: 19.68
-          }
+            value: 19.68,
+          },
         })
       })
   })
