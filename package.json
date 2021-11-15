@@ -1,5 +1,5 @@
 {
-  "name": "simple-exchangerates-api",
+  "name": "simple-exchange-rates-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,7 @@
     "startDev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
     "lint": "eslint -p tsconfig.json -c .eslintrc.js",
     "test": "jest --ci --coverage",
-    "test:watch": "jest --watch",
-    "test:e2e": "jest --config ./tests/jest-e2e.json"
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",
