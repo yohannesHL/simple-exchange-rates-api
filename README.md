@@ -10,13 +10,13 @@ version: 5b8d0fd276b6d288905ed2f63a934e057e8feca2
 
 ```bash
 
-# create a .env enironment configuration using the provided template
+# create a .env environment configuration using the provided template
 $ cp env.template .env
 
 # Install packages
 $ npm i
 
-# Start development server
+# Start up the development server
 $ npm run devServer
 ```
 ## Exploring the API
