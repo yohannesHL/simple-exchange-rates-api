@@ -38,6 +38,7 @@ check the endpoints:
 
 
 1. Get GBP rates: http://localhost:3000/rates/GBP/
+
     Returns:
 
     ```
