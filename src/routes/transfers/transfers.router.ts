@@ -9,8 +9,10 @@ const router = new Router()
 router.get('/transfers', async (ctx: Context) => {
   const { balance, toCurrency = '' } = balanceTransferSchema.cast(ctx.query)
   const hasErrors =
-    false ===
-    (await validateSchema(ctx, balanceTransferSchema, { balance, toCurrency }))
+    (await validateSchema(ctx, balanceTransferSchema, {
+      balance,
+      toCurrency,
+    })) === false
   if (hasErrors) return
 
   const balances = Array.isArray(balance) ? balance : [balance]

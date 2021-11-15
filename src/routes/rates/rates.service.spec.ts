@@ -7,7 +7,7 @@ import { convertCurrencyAmount, getExchangeRates } from './rates.service'
 jest.mock('../../lib/rates', () => ({
   getExchangeRate: jest.fn().mockReturnValue(0.7231),
   convertExchangeRate: jest.fn().mockReturnValue(mockedExchangeRateConversion),
-  getUSDExchangeRates: jest.fn().mockReturnValue(allExchangeRates['USD']),
+  getUSDExchangeRates: jest.fn().mockReturnValue(allExchangeRates.USD),
 }))
 
 describe('Rates service ', () => {
@@ -17,7 +17,7 @@ describe('Rates service ', () => {
       ok: true,
       data: {
         baseCurrency: 'USD',
-        rates: allExchangeRates['USD'],
+        rates: allExchangeRates.USD,
       },
     })
   })

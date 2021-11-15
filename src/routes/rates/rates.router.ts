@@ -14,7 +14,7 @@ router.get('/rates', async (ctx: Context) => {
 router.get('/rates/:baseCurrency', async (ctx: Context) => {
   const [, , baseCurrency] = ctx.path.split('/')
   const hasErrors =
-    false === (await validateSchema(ctx, currencyCodeSchema, baseCurrency))
+    (await validateSchema(ctx, currencyCodeSchema, baseCurrency)) === false
   if (hasErrors) return
 
   ctx.body = await getExchangeRates(baseCurrency)
@@ -27,7 +27,7 @@ router.get('/rates/:baseCurrency/convert', async (ctx: Context) => {
     from: baseCurrency,
   }) as ConvertCurrencyInput
   const hasErrors =
-    false === (await validateSchema(ctx, convertSchema, payload))
+    (await validateSchema(ctx, convertSchema, payload)) === false
   if (hasErrors) return
 
   ctx.body = await convertCurrencyAmount(payload)

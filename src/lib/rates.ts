@@ -19,7 +19,7 @@ export const globalMaxDecimalPlaces = 4
 export const USDCurrencyCode = 'USD'
 
 export const getUSDExchangeRates = (): Record<string, number> =>
-  exchangeRates['USD']
+  exchangeRates.USD
 
 export const convertExchangeRate = (baseCurrency = USDCurrencyCode) => {
   const usdRates = getUSDExchangeRates()
@@ -57,7 +57,7 @@ export const getExchangeRate = (
   return newXRates[quoteCurrency]
 }
 
-const toPrecision = (amount: number, decimals: number = 2) =>
+const toPrecision = (amount: number, decimals = 2) =>
   parseFloat(amount.toFixed(decimals))
 
 const getDecimalDigits = (amount: number): number => {

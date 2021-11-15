@@ -12,7 +12,7 @@ describe('Rates API (e2e)', () => {
         expect(res.body.ok).toBe(true)
         expect(res.body.data).toMatchObject({
           baseCurrency: 'USD',
-          rates: allExchangeRates['USD'],
+          rates: allExchangeRates.USD,
         })
       })
   })
@@ -26,7 +26,7 @@ describe('Rates API (e2e)', () => {
         expect(res.body.ok).toBe(true)
         expect(res.body.data).toMatchObject({
           baseCurrency: 'GBP',
-          rates: allExchangeRates['GBP'],
+          rates: allExchangeRates.GBP,
         })
       })
   })

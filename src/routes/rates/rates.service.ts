@@ -11,7 +11,7 @@ import {
 } from './rates.interface'
 
 export const getExchangeRates = async (
-  baseCurrency: string = 'USD'
+  baseCurrency = 'USD'
 ): Promise<ServiceResponse<ExchangeRateResult>> => {
   const rates =
     baseCurrency === 'USD'
