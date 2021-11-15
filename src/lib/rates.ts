@@ -51,8 +51,8 @@ export const getExchangeRate = (baseCurrency: string, quoteCurrency: string) => 
  
 const toPrecision = (amount: number, decimals: number = 2)=> parseFloat(amount.toFixed(decimals))
 
-const getDecimalDigits = (amount: number | string): number => {
-    return (typeof amount === 'number' ? amount.toString().split('.')[1]?.length : amount.length) || 0
+const getDecimalDigits = (amount: number): number => {
+    return (typeof amount === 'number' ? amount.toString().split('.')[1]?.length : 0) || 0
 }
 
 
