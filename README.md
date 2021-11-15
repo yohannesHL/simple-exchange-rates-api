@@ -21,10 +21,10 @@ $ npm run devServer
 ```
 ## Exploring the API
 
-Open you browser and go to: http://localhost:3000.
+Open your browser and go to: http://localhost:3000.
 > Note: If you changed the HTTP_PORT on your .env file then this would be `http://localhost:<HTTP_PORT>`
 
-check the endpoints:
+Check the endpoints:
 
 - `GET /rates` - Returns USD exchange rates
 
