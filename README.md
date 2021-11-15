@@ -40,7 +40,7 @@ check the endpoints:
 Tests are found in `*.spec.ts` files next to the module under test.
 
 ```bash
-```
 # Run all tests
+
 $ npm run test
 ```
